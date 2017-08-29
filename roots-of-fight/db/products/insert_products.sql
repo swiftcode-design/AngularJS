@@ -1,0 +1,389 @@
+-- INSERT INTO products (name, info, price, sku, type, collections)
+-- VALUES
+-- (
+--   'TYSON ''86 SLEEVLESS HOODY',
+--   '''Iron'' Mike Tyson truly arrived in 1986 when he defeated Trevor Berbick for the WBC heavyweight title. Sleeveless hoody crafted with premium cotton french terry, signature specialty crackle prints, contrast side stitching, and U.S.A badge. Subtly frayed pocket opening and raw finished armhole lend to an authentic vintage look & feel. Made in U.S.A.',
+--   '69.95',
+--   '2432-M-20-VBK',
+--   'sweatshirt',
+--   'Mike Tyson'
+-- ),
+-- (
+--   'TYSON - IRON MIKE ''88 STRIPED TANK',
+--   '''Tyson 88'' Tank - special edition, featuring contrast side paneling and the badges are inspired by the details from Tyson''s trunks worn the night he defeated Spinks to capture the elusive Lineal Belt.  New super soft hand, vintage look & feel tank with specialty crackle ink; contrast binding at the neckline & armhole, contrast side striped panel.',
+--   '34.95',
+--   '2255-M-05-BHT',
+--   'tank',
+--   'Mike Tyson'
+-- ),
+-- (
+--   'MIKE TYSON BMOTP TANK',
+--   'Commemorating the most feared boxer of the 1980s, "Iron" Mike Tyson, who won the heavyweight title at just 20 years old.',
+--   '34.95',
+--   '2625-M-05-BHT',
+--   'tank',
+--   'Mike Tyson'
+-- ),
+-- (
+--   'TYSON ''88 SHORTS',
+--   'How did Mike Tyson put the Catskills on the map? By winning three world titles at the age of 20. New vintage dyed and washed, lean fit shorts crafted with premium cotton french terry. Raw hem finish lends to an authentic vintage look.',
+--   '59.95',
+--   '2427-M-21-VBK',
+--   'shorts',
+--   'Mike Tyson'
+-- ),
+-- (
+--   'Mike Tyson Catskill Sleeveless Hoody',
+--   'Our new Mike Tyson sleeveless hoody just dropped, paying respect to the man who put the Catskills on the map in the mid-1980s — "Iron" Mike. After a tumultuous youth a 16-year old Tyson found himself in the care of the great Cus D''Amato, who became a father figure, a coach and a mentor for Mike. By 1986, at just 20 years old, Tyson was the heavyweight champion, and D''Amato was the man who pumped blood through the champion''s heart.',
+--   '69.95',
+--   '2652-M-20-RNY',
+--   'sweatshirt',
+--   'Mike Tyson'
+-- ),
+-- (
+--   'Tyson BMOTP Sun Faded Tee',
+--   'Iron Mike - ''My style is impetuous, my defense is impregnable, and I''m just ferocious.'' Super premium T., vintage dyed and washed for super soft hand, throwback look & feel.',
+--   '39.95',
+--   '1890-M-01-VBK',
+--   'tee',
+--   'Mike Tyson'
+-- ),
+-- (
+--   'Tyson BMOTP Melton Jacket',
+--   'Celebrating the Baddest Man on the Planet, "Iron" Mike Tyson, who became the youngest heavyweight champion in boxing history with his utter dismantling of Trevor Berbick in 1986. How galvanizing was Mike Tyson as a HW force in the 1980s, when he knocked out everyone from Larry Holmes to Michael Spinks? He resurrected a public that believed the glory days of boxing went away for in the 1970s with Muhammad Ali.',
+--   '249.99',
+--   '2860-M-16-BLK',
+--   'jacket',
+--   'Mike Tyson'
+-- ),
+-- (
+--   'Cassius Clay Classic Tee',
+--   'Honoring the "Louisville Lip," Cassius Clay, who went on to become one of the greatest cultural influences of the 20th century.',
+--   '39.95',
+--   '2660-M-01-RNY',
+--   'tee',
+--   'Muhammad Ali'
+-- ),
+-- (
+--   'Ali Rumble - People''s Champ Zaire Tee',
+--   'Zaire was the sight of boxing''s most hallowed event — The ''People''s Champ'' Muhammad Ali vs. George Foreman, forever canonized as the ''Rumble in the Jungle.''',
+--   '39.95',
+--   '2416-M-01-YLW',
+--   'tee',
+--   'Muhammad Ali'
+-- ),
+-- (
+--   'Cassius Clay Sweatpants',
+--   'Back before there was a Muhammad Ali, there was a kid from Louisville named Cassius Clay, who scored his first victory on Oct. 29, 1960.',
+--   '69.95',
+--   '2424-M-19-GRY',
+--   'tee',
+--   'Muhammad Ali'
+-- ),
+-- (
+--   'Muhammad Ali Snapback hat',
+--   '''Float like a butterfly, sting like a bee.'' We pay tribute to Muhammad Ali, the Man/Champion/Poet/Icon.',
+--   '34.95',
+--   '2610-M-17-BLK',
+--   'hat',
+--   'Muhammad Ali'
+-- ),
+-- (
+--   'Muhammad Ali GOAT Cardigan',
+--   'Classic cardigan honoring "The Greatest" that ever was. Muhamamd Ali was a champion both inside and out of the prize ring, and he goes down in history as not just one of the most important sports figures in history, but one of the most significant Americans in terms of his reach.',
+--   '89.95',
+--   '2655-M-25-BLK',
+--   'sweatshirt',
+--   'Muhammad Ali'
+-- ),
+-- (
+--   'Cassius Clay Melton Jacket',
+--   'Honoring the most iconic name in boxing''s hallowed history, Cassius Clay, who transformed himself into Muhammad Ali while training at the famous 5th Street Gym in Miami Beach. Clay was a 7-to-1 underdog when he stepped in the ring against the most formidable heavyweight champion of the day, Sonny Liston, and yet he prevailed not only as the new force in boxing, but as one of the most transcendent sports figures that ever lived.',
+--   '249.95',
+--   '2859-M-16-BLK',
+--   'jacket',
+--   'Muhammad Ali'
+-- ),
+-- (
+--   'J.C. Chavez Snapback Hat',
+--   'Honoring Julio Cesar Chavez, the greatest Mexican boxer ever! “El Gran Campeon Mexicano” fearlessly stalked his opponents round by round, breaking them down with brutal body attacks. Traditionally Chavez was a slow starter and would increase his output throughout the fight in an overwhelming style which, paired with his ability to take a shot, helped him win six world titles in three different weight classes.',
+--   '34.95',
+--   '2765-M-17-BLK',
+--   'hat',
+--   'JC Chavez'
+-- ),
+-- (
+--   'JC Chavez Pullover Hoody',
+--   'Honoring six-time world champion Julio Cesar Chavez, "El Gran Campeon Mexicano," one of the greatest boxers that ever lived. Chavez distinguished himself for two decades, fighting 90 times before ever taking a loss. He still holds a number of boxing''s most hallowed records, such as title defenses (27), most title fights (37), and title fight victories (31). No fighter did more with his spotlight than the one and only JCC.',
+--   '74.95',
+--   '2601-M-11-RRD',
+--   'sweatshirt',
+--   'JC Chavez'
+-- ),
+-- (
+--   'Chavez El Gran Campeon Sleeveless Hoody',
+--   'Honoring JC Chavez who stood as a pillar in the boxing world from 1980-2005, becoming a six-time world champion in three different weight classes. During that time he rewrote the record books for title fights and title defenses. To this day, Chavez remains not just Mexico''s greatest fighter, but a true champion of his country.',
+--   '69.95',
+--   '2673-M-20-BLK',
+--   'sweatshirt',
+--   'JC Chavez'
+-- ),
+-- (
+--   'Julio Cesar Chavez Tee',
+--   'For a quarter of a century, Culiacan''s Julio Cesar Chavez posted 107 wins in the boxing ring, and stands to this day as Mexico''s greatest fighter.',
+--   '39.95',
+--   '2604-M-01-RBK',
+--   'tee',
+--   'JC Chavez'
+-- ),
+-- (
+--   'Julio Cesar Chavez Shorts',
+--   'Celebrating the great Julio Cesar Chavez, the six-time world champion considered by many as the greatest Mexican fighter of all time. ',
+--   '59.95',
+--   '2602-M-21-RRD',
+--   'shorts',
+--   'JC Chavez'
+-- ),
+-- (
+--   'Smokin'' Joe Frazier Snapback Hat',
+--   'Paying homage to the legendary Smokin’ Joe Frazier. Frazier had a no-nonsense approach to the fight game, he would walk forward, pressure, bob, weave and deliver that left hook! His legendary bouts against Muhammad Ali will forever be engraved in boxing history.',
+--   '34.95',
+--   '2767-M-17-BLK',
+--   'hat',
+--   'Joe Frazier'
+-- ),
+-- (
+--   'Fight of the Century - Ali/Frazier Tee',
+--   'Commemorating the epic first clash between Joe Frazier and Muhammad Ali – forever known as "The Fight of the Century" — which took place on March 8, 1971 at Madison Square Garden.',
+--   '39.95',
+--   '2584-M-01-TWH',
+--   'tee fight-century',
+--   'Joe Frazier'
+-- ),
+-- (
+--   'Thrilla Souvenir Pullover Hoody',
+--   'Commemorating the 1975 heavyweight classic, the "Thrilla in Manila," which some 40 years later is still considered by many to be the best boxing bout of all time. It was the third encounter between the bitter rivals Muhammad Ali and Joe Frazier, the rubber match in which neither man would yield an inch — and both left the other at death''s door by the end. That one fight told you everything you needed to know about either man.',
+--   '74.95',
+--   '2658-M-11-RED',
+--   'sweatshirt  fight-century',
+--   'Joe Frazier'
+-- ),
+-- (
+--   'Rocky Marciano ''52 Sweatpants',
+--   'Commemorating the "Brockton Blockbuster," Rocky Marciano, who won the heavyweight title against Jersey Joe Walcott in 1952 and went 49-0 in his career.',
+--   '69.95',
+--   '2447-M-19-GRY',
+--   'sweatpants',
+--   'Rocky Marciano'
+-- ),
+-- (
+--   'Rocky Marciano Striped Tank',
+--   'Honoring the "Brockton Blockbuster," the undefeated heavyweight champion of the world from 1952-1956, Rocky Marciano! Marciano won the title against Jersey Joe Walcott in 1952, and knocked him out in the rematch in 1953 in the first round. He knocked a lot of guys out that way. "Why waltz with a guy for 10 rounds if you can knock him out in one," he famously quipped.',
+--   '34.95',
+--   '2628-M-05-GRY',
+--   'tank',
+--   'Rocky Marciano'
+-- ),
+-- (
+--   'Bruce Lee Script Tee',
+--   'Commemorating Hong Kong''s own, Bruce Lee -- the action icon of the 1970s, and the father of Jeet Kune Do. Lee''s imprint on modern martial arts in nearly impossible to track, as he inspired generations to find their inner strength. Or, more directly, Bruce Lee showed people how to "be like water."',
+--   '39.95',
+--   '2635-M-01-RBK',
+--   'tee',
+--   'Bruce Lee'
+-- ),
+-- (
+--   'Bruce Lee Photo Triblend Tee',
+--   'Bruce Lee, who faced insurmountable odds in becoming an Asian-American superstar at a time when none existed, remains the most hallowed name in the martial arts.',
+--   '39.95',
+--   '2521-M-01-TWH',
+--   'tee',
+--   'Bruce Lee'
+-- ),
+-- (
+--   'Bruce Lee JKD Sweatpants',
+--   'In honor of Bruce Lee''s revolutionary Jeet Kune Do — the "way of the intercepting fist" — which blended philosophy with minimalist action.',
+--   '69.95',
+--   '2503-M-19-GRY',
+--   'sweatpants',
+--   'Bruce Lee'
+-- ),
+-- (
+--   'Bruce Lee Snapback hat',
+--   'Commemorating Bruce Lee, who inspired millions all over the world with his brand of Kung Fu. Walk on!',
+--   '34.95',
+--   '2611-M-17-BLK',
+--   'hat',
+--   'Bruce Lee'
+-- ),
+-- (
+--   'Bruce Lee JFGF Cut-Off Sweatshirt',
+--   'Our new cut-off sweatshirt observing Bruce Lee''s Jun Fan Gung Fu Institute in LA, which worked off the precepts of "using no way as way," and "having no limitation as limitation." Lee was far more than a cult icon of the silver screen during the 1970s for his films like "Enter the Dragon" — he was also a revolutionary in the martial arts, distilling method and philosophy into his famous Jeet Kune Do.',
+--   '49.95',
+--   '2665-M-26-GRY',
+--   'sweatshirt',
+--   'Bruce Lee'
+-- ),
+-- (
+--   'Bruce Lee Stadium Jacket',
+--   'Honoring the era''s most iconic figure, Bruce Lee. Known for his starring roles in cult classic films such as "Enter the Dragon" and "The Game of Death," Lee remains one of the 20th century''s most influential figures, particularly in the martial arts. He was also the founder of Jeet Kune Do, which among its tenants stood the principle of the "intercepting fist."',
+--   '109.99',
+--   '2702-M-15-RED',
+--   'jacket',
+--   'Bruce Lee'
+-- ),
+-- (
+--   'Chuck Liddell Snapback Hat',
+--   'Paying respect to a true MMA Legend, Chuck Liddell. Liddell’s “kill or be killed” style made him a fan favorite, and when the Iceman fought, he never took a backwards step as long as his opponent was still standing.',
+--   '34.95',
+--   '2695-M-17-NVY',
+--   'hat',
+--   'Chuck Liddell'
+-- ),
+-- (
+--   'Chuck Liddell Sleeveless Hoody',
+--   'Sleeveless hoody commemorating San Luis Obispo''s own, Chuck Liddell, the legendary "Iceman" of the Octagon.',
+--   '69.95',
+--   '2643-M-20-RNY',
+--   'sweatshirt',
+--   'Chuck Liddell'
+-- ),
+-- (
+--   'Royce Gracie Snapback Hat',
+--   'Paying tribute to Royce Gracie, the UFC 1 legend who dominated his opponents using Gracie Jiu-Jitsu techniques. Royce introduced the MMA world to a martial art that shattered the stereotypical view of “the bigger man always wins.”',
+--   '34.95',
+--   '2743-M-17-BLK',
+--   'hat',
+--   'Royce Gracie'
+-- ),
+-- (
+--   'Royce Gracie #1 Tee',
+--   'Going back to that fateful night in Denver in 1993 and the beginning of it all. Vintage dyed and washed with specialty crackle print with the original AG appliqued badge.',
+--   '39.95',
+--   '1776-M-01-RBK',
+--   'tee',
+--   'Royce Gracie'
+-- ),
+-- (
+--   'Jackie Robinson Stadium Jacket',
+--   'Honoring the Brooklyn Dodgers'' legendary second baseman, Jackie Robinson — the single most influential game-changer in baseball''s history. Robinson was not only the first African-American to cross the color line and play in the Major Leagues, he was also baseball''s most courageous to have stood his ground during a tumultuous time in American history. Oh, and he could play, too. He was named the Rookie of the Year in 1947, and over the course of a decade maintained a .311 batting average. Never forget, No. 42.',
+--   '109.99',
+--   '2706-M-15-BLU',
+--   'jacket',
+--   'Jackie Robinson'
+-- ),
+-- (
+--   'Jackie Robinson 42 Snapback Hat',
+--   'Honoring the legendary second baseman Jackie Robinson of the Brooklyn Dodgers. Robinson was not only the first African-American ballplayer to break the MLB color line in 1947, but he stood as a symbol of equality at a time when racial tensions in baseball were at an extreme. Robinson would quickly make people color blind, though, going on to become the Rookie of the Year (1947), the National League batting champion (1949) and a six-time All Star. His No. 42 was retired by Major League Baseball in 1997.',
+--   '34.95',
+--   '2769-M-17-BLU',
+--   'hat',
+--   'Jackie Robinson'
+-- ),
+-- (
+--   'Babe Ruth Snapback Hat',
+--   'In honor of larger than life baseball icon Babe Ruth, the original "Sultan of Swat," who changed the game as we know it in the roaring 1920s with the New York Yankees. Ruth changed the philosophy of baseball by introducing the long ball as the most exciting singular event in the sport. From 1920-1934, Ruth became a national treasure, revitalizing baseball and making the Yankees the premiere team in the Majors. In 1923, Yankee Stadium opened, and was aptly dubbed "The House that Ruth Built." We honor the great "Bambino" who, to this day, embodies the spirit of baseball.',
+--   '34.95',
+--   '2775-M-17-NVY',
+--   'hat',
+--   'Babe Ruth'
+-- ),
+-- (
+--   'Babe Ruth Stadium Jacket',
+--   'In honor of the great Babe Ruth. "The Bambino" single-handedly transformed the early 20th century small-ball era of baseball into a thriving new league, one home run swing at a time. After mostly pitching for the Boston Red Sox between 1914-1919, he was sold to the New York Yankees. There he rewrote the record books as the "Sultan of Swat," hitting the vast majority of his overall 714 home runs, and establishing himself as the hero of America''s pastime. His success led to the opening of Yankee Stadium in 1923, known up until it was demolished in 2010, as the "House that Ruth Built."',
+--   '109.99',
+--   '2707-M-15-NVY',
+--   'jacket',
+--   'Babe Ruth'
+-- ),
+-- (
+--   'Babe Ruth Bronx NY Monogram Sweatshirt',
+--   'His name is synonymous with baseball, and we pay tribute to the "Bambino" himself, Babe Ruth, whose very name invokes the spirit of America''s pastime.',
+--   '59.95',
+--   '2571-M-09-VBK',
+--   'sweatshirt',
+--   'Babe Ruth'
+-- ),
+-- (
+--   'Allen Iverson Snapback Hat',
+--   'In tribute to one of the greatest playmakers in NBA history, the Philadelphia 76ers guard Allen Iverson. "AI" was a phenom going back to his days playing high school ball in Virginia and at Georgetown, but nobody knew he''d have the impact he did in the NBA. He was clutch, and he was money. His all-time playoff scoring average was 29.7 points per game, second only to Michael Jordan. And who can forget his arrival into the NBA? He crossed up Jordan himself — broke his ankles, as they say. But he was more than that, too. Iverson stands as one of the most influential basketball players, because at barely 6-foot he showed so many that it can be done in a land of giants.',
+--   '34.95',
+--   '2795-M-17-BLK',
+--   'hat',
+--   'Allen Iverson'
+-- ),
+-- (
+--   'Allen Iverson Stadium Jacket',
+--   'In tribute to the original ankle-breaker himself, 11-time NBA All-Star Allen Iverson, who from 1996-2006 turned the basketball world''s eyes towards Philadelphia.',
+--   '109.99',
+--   '2803-M-15-BLU',
+--   'jacket',
+--   'Allen Iverson'
+-- ),
+-- (
+--   'Shaq #34 Tee',
+--   'Honoring one of the NBA''s greatest centers to ever play the game, Shaquille O''Neal. Between 1996-2004, while playing for the Los Angeles Lakers, Shaq distinguished himself as not only one of the most dominant players of all time, but as a personality in Hollywood. He would transcend the hardwood over the course of his career, starring in movies (Kazaam and Blue Chips) and television shows (he hosted Saturday Night Live) and venturing into music (his 1993 rap album, Shaq Diesel, went platinum).',
+--   '39.95',
+--   '2782-M-01-RPP',
+--   'tee',
+--   'Shaq'
+-- ),
+-- (
+--   'Shaquille O''Neal Snapback Hat',
+--   'Honoring the 7-foot-1 colossus, Shaquille O''Neal, one of the greatest characters — and players — to ever step foot on the hardwood. O''Neal''s personal stat lines are ridiculous — 15-time All-Star, three-time NBA Finals MVP, seventh all-time in points scored — but it was his larger than life personality that has translated for fans over the years. "Shaq" could ball, he could act (check out Kazaam), he could rap (Shaq Diesel went platinum) and he could make people laugh. “I’''m tired of hearing about money,” he once said. “Money, money, money, money. I just want to play the game, drink Pepsi, wear Reebok.”',
+--   '34.95',
+--   '2783-M-17-PPL',
+--   'hat',
+--   'Shaq'
+-- ),
+--
+-- (
+--   'Payton ''Sweetness'' Sweatpants',
+--   'Commemorating the inimitable Walter Payton, one of the most iconic players in NFL history. "Sweetness" broke many running back records between 1975-1987, and to this day remains one of the most influential figures in the game. To this day, the league hands out the Walter Payton NFL Man of the Year Award to a player who demonstrates excellence both on and off the field.',
+--   '69.99',
+--   '2761-M-19-DNY',
+--   'sweatpants',
+--   'Walter Payton'
+-- ),
+-- (
+--   'Walter Payton #34 Tee',
+--   'Celebrating Chicago''s nine-time Pro Bowler and two-time league MVP, Walter Payton. Not only was Payton one of the hardest running backs to bring down, but his legs were always pumping with an unparalleled desire. No man wanted yards like Payton. No man soared through the air as often, or flattened a defender in his way. Payton remains an iconic figure not just for his playing ability and work ethic, but for being a great man. Long live, "Sweetness."',
+--   '39.95',
+--   '2810-M-01-RNY',
+--   'tee',
+--   'Walter Payton'
+-- ),
+-- (
+--   'Barry Sanders #20 Tee',
+--   'Celebrating the greatest running back in Detroit Lions history, Barry Sanders, who made the Pro Bowl each of his 10 years in the NFL. There has never been a more dynamic, Houdini-like running back than Sanders, who could stop on a dime, redirect himself, and then disappear through a hole before a defender could set his feet. How good was he? He averaged 1,526 yards per season.',
+--   '39.95',
+--   '2810-M-01-RNY',
+--   'tee',
+--   'Barry Sanders'
+-- ),
+-- (
+--   'Barry Sanders Snapback Hat',
+--   'Honoring the great elusive Detroit Lions running back, Barry Sanders, who for a 10-year span between 1989-1998 rushed for 15,269 yards and 99 touchdowns. In 1997 alone Sanders ran for 2,053 yards, earning him MVP honors. Yet even as one of the most celebrated running backs of the day, he remained humble. "I''m not better than anyone else," he once said. "I''m not supposed to be on a pedestal. I''ve always stayed away from that." ',
+--   '34.95',
+--   '2757-M-17-BLU',
+--   'hat',
+--   'Barry Sanders'
+-- ),
+-- (
+--   'Andre the Giant Tee',
+--   'Where would the wrestling world be without Andre the Giant, the 7-foot-4, 520-pound colossus from France? Andre was a sensation for two decades, competing in some of wrestling''s biggest matches. His role as Fezzik in The Princess Bride only served to enhance his cult figure status, which is as strong today as it was a quarter-of-a-century ago when he died at 46. Yet he lives on forever as one of wrestling''s greatest, most recognizable, fully adored icons. ',
+--   '39.95',
+--   '2930-M-01-YLW',
+--   'tee',
+--   'Andre The Giant'
+-- ),
+-- (
+--   'Andre the Giant 8th Wonder Sweatshirt',
+--   'Sweatshirt honoring the 7-foot-4, 520-pound behemoth of the squared circle, Andre the Giant! Andre was a force in the realm of pro wrestling for two decades, going undefeated between 1973-1987. His matches with Hulk Hogan at Wrestlemania III, Antonio Inoki in Japan and Kill Khan were formative events in the sphere of pro wrestling. As a Frenchman who was a global sensation, Andre is perhaps the most recognizable figure to ever dawn a singlet.',
+--   '59.95',
+--   '2931-M-09-VBK',
+--   'sweatshirt',
+--   'Andre The Giant'
+-- );
+--
+--

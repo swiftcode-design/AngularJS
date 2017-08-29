@@ -1,0 +1,25 @@
+<nav-dir></nav-dir>
+<div class="collectionsVContainer">
+  <div class="collectionsV-nav">
+    <a ui-sref="home">Home</a> &nbsp; / &nbsp; Collections &nbsp; / &nbsp; <span>{{collectionName}}</span>
+  </div>
+  <ul class="collectionsV-ul">
+    <li ui-sref="productDetails({id: collectionName, name: product.name})" class="collectionsV-li" ng-repeat="product in collectionProducts">
+      <img src="{{product.jsonb_agg[0]}}" />
+      <div class="collectionsV-li-div">
+        <h4>{{product.name}}</h4>
+
+        <p>
+          ROOTS OF {{product.roots | uppercase}}
+        </p>
+        <p>
+          {{product.price | currency}} USD
+        </p>
+      </div>
+    </li>
+  </ul>
+  <div class="collectionsV-nav">
+    <a ui-sref="home">Home</a> &nbsp; / &nbsp; Collections &nbsp; / &nbsp; <span>{{collectionName}}</span>
+  </div>
+</div>
+<footer-dir></footer-dir>

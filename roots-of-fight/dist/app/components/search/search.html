@@ -1,0 +1,18 @@
+<nav-dir></nav-dir>
+
+<div class="search-main-container" ng-repeat="p in searchProducts">
+  <div>
+    <img src="{{p.jsonb_agg[0]}}" />
+  </div>
+  <div>
+    <p>
+      {{p.name}}
+    </p>
+    <p>
+      {{p.info}}
+    </p>
+  </div>
+
+</div>
+
+<footer-dir></footer-dir>

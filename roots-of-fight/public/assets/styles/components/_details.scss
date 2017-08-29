@@ -1,0 +1,200 @@
+.details-main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white;
+
+  .details-nav {
+    width: 90%;
+    font-size: 13px;
+    span{
+      color: $red;
+    }
+  }
+  .details-product-div {
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    border-top: 1px solid white;
+
+    .details-product-order{
+      display: flex;
+      flex-direction: column;
+      width: 25%;
+      .size-dropdown{
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+        select{
+          height: 30px;
+          width: 200px;
+          border-radius: 2px;
+          border: 1px solid #444444;
+          background: black;
+          color: white;
+        }
+      }
+
+      .details-product-order-add-cart{
+        display: flex;
+        margin-bottom: 10px;
+        .details-product-order-qty{
+          display: flex;
+          flex-direction: column;
+          width: 23%;
+          label{
+            margin: 0 0 5px 0;
+          }
+          input{
+            width: 40px;
+            height: 20px;
+            border-radius: 2px;
+            background: black;
+            border: 1px solid #444444;
+            color: #747474;
+            border-radius: 2px;
+          }
+        }
+      }
+      button{
+        background: $red;
+        width: 45%;
+        border: none;
+        color: white;
+        font-size: 15px;
+        border-radius: 2px;
+      }
+      .details-product-order-larg-img{
+        display: none;
+      }
+      ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        list-style: none;
+        margin: 0;
+        padding: 20px 0;
+        width: 100%;
+        li{
+          width: 40%;
+          padding: 10px 0;
+          margin: 0;
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+    .details-product-img{
+      width: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .details-product-img-inner{
+        height: 90%;
+        width: 90%;
+        overflow: hidden;
+        img{
+          width: 100%;
+        }
+      }
+
+    }
+    .details-product-order-2{
+      width: 23%;
+      p{
+        font-size: 13px;
+        line-height: 1.6;
+        margin: 20px 0;
+      }
+      h3{
+        margin: 20px 0;
+      }
+      ul{
+        margin: 0;
+        li{
+          font-size: 13px;
+          line-height: 2.3;
+        }
+      }
+    }
+  }
+  @media(max-width: 1280px){
+    .details-product-div{
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      .details-product-order{
+        justify-content: space-around;
+        width: 50%;
+        .size-dropdown{
+          margin: 20px 0;
+          select{
+            height: 50px;
+            width: 100px;
+          }
+        }
+        ul{
+          flex-wrap: nowrap;
+          justify-content: space-around;
+          height: 40%;
+          li{
+            img{
+              width: 60%;
+            }
+          }
+        }
+      }
+      .details-product-img{
+        width: 50%;
+      }
+      .details-product-order-2{
+        width: 50%;
+      }
+    }
+  }
+  @media(max-width: 768px){
+    .details-product-div{
+      flex-direction: column;
+      .details-product-order{
+        width: 100%;
+        .size-dropdown{
+          order: 99;
+          select{
+            height: 30px;
+            width: 200px;
+          }
+        }
+        .details-product-order-add-cart{
+          order: 100;
+          .details-product-order-qty{
+            label{
+            }
+            input{
+            }
+          }
+        }
+        .details-product-order-larg-img{
+          width: 80%;
+          margin: 0 auto;
+          display: block;
+          img{
+            width: 100%;
+          }
+        }
+        ul{
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+      .details-product-img{
+        display: none;
+        width: 100%;
+      }
+      .details-product-order-2{
+        width: 100%;
+      }
+    }
+  }
+}

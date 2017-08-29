@@ -1,0 +1,130 @@
+.order-summary-main-container{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+
+  .summary-order-summary-header{
+    border: solid 1px #444444;
+    background: #0D0D0D;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    height: 60px;
+    .summary-order-summary-header-left{
+      color: red;
+      display: flex;
+      align-items: center;
+      i{
+        padding: 0 10px;
+      }
+    }
+  }
+
+  .summary-order-main-summary{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    height: 0px;
+
+
+    .summary-order-products{
+      padding: 20px 0;
+      .summary-order-products-ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        li{
+          padding: 5px 0;
+          display: flex;
+          margin: 0;
+          align-content: center;
+          justify-content: space-between;;
+          div:first-child{
+            width: 60%;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            div{
+              p{
+                padding: 0 20px;
+              }
+              h6{
+                padding: 0 20px;
+                color: #606060;
+              }
+            }
+
+            span{
+              background: #8A8A8A;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+            }
+            img{
+              width: 15%;
+              padding: 10px 0;
+              border-radius: 10px;
+              background: white;
+            }
+          }
+          div:nth-child(2){
+            width: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+          }
+
+
+        }
+      }
+    }
+    .summary-order-giftcard{
+      border-top: solid 1px #444444;
+      border-bottom: solid 1px #444444;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      input{
+        width: 80%;
+        height: 30px;
+        border-radius: 5px;
+        border: solid 1px #444444;
+        background: #1A1A1A
+      }
+    }
+    .summary-order-shipping{
+      display: flex;
+      flex-direction: column;
+      border-bottom: solid 1px #444444;
+      div{
+        display: flex;
+        justify-content: space-between;
+        p:first-child{
+          color: #606060;
+        }
+      }
+    }
+    .summary-order-total{
+      display: flex;
+      justify-content: space-between;
+      border-bottom: solid 1px #444444;
+      div{
+        display: flex;
+        align-items: center;
+        h5{
+          color: #606060;
+        }
+      }
+    }
+  }
+
+}

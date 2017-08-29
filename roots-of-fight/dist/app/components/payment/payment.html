@@ -1,0 +1,104 @@
+
+<div ui-sref="home" class="payment-main-logo">
+  <img src="./assets/images/main/checkout_logo_image.png"/>
+</div>
+<order-dir></order-dir>
+<div class="payment-main-container">
+
+  <div class="payment-address-info">
+    <div class="payment-address-address">
+      <p>
+        Shipping Address
+      </p>
+      <p>
+        <!-- 2925 se 131st ave, Portland, United States -->
+        {{address}}
+      </p>
+    </div>
+    <div class="payment-address-shipping">
+      <p>
+        Shipping Method
+      </p>
+      <p>
+        Free Shipping - Free
+      </p>
+    </div>
+  </div>
+
+  <div class="payment-payment-header">
+    <h3>Payment method</h3>
+    <p>
+      All transactions are secure and encrypted.
+    </p>
+  </div>
+<form ng-submit="postOrder(credit)">
+
+  <div class="payment-credit-info">
+    <div class="payment-credit-header">
+      <div>
+        <input type="radio" checked />
+        <p>
+          Credit Card
+        </p>
+      </div>
+
+      <div>
+        <i class="fa fa-cc-visa fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-cc-mastercard fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-paypal fa-2x" aria-hidden="true"></i>
+      </div>
+    </div>
+
+    <div class="payment-credit-number">
+      <input type="number"  ng-model="credit.cardNum" placeholder="Card number" required />
+      <input ng-model="credit.name" placeholder="Name on card" required/>
+      <input  ng-model="credit.mm"  placeholder="MM/YY" required/>
+      <input type="number" ng-model="credit.cvv" placeholder="CVV" required/>
+    </div>
+  </div>
+
+  <div class="payment-billing-address">
+    <div class="payment-billing-address-choice">
+      <div>
+        <input checked type="radio" />
+        <p>
+          Same as shipping address
+        </p>
+      </div>
+
+      <div>
+        <input  type="radio" />
+        <p>
+          Use a different billing address
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="payment-end">
+    <div>
+      <i class="fa fa-chevron-left" aria-hidden="true"></i>
+      <p>
+        Return to customer information
+      </p>
+    </div>
+    <div>
+      <button type="submit">Complete Order</button>
+    </div>
+  </div>
+
+  </form>
+
+<div class="payment-footer">
+  <p>
+    Refund policy
+  </p>
+  <p>
+    Privacy policy
+  </p>
+  <p>
+    Terms of  service
+  </p>
+</div>
+
+</div>

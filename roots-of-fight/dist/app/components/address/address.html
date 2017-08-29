@@ -1,0 +1,63 @@
+<div class="address-main-container">
+  <div ui-sref="home" class="address-main-logo">
+    <img src="./assets/images/main/checkout_logo_image.png"/>
+  </div>
+  <order-dir></order-dir>
+  <div class="address-fill-address">
+    <div class="address-fill-customer-info">
+      <h3>Customer Information</h3>
+      <p>
+        email address
+      </p>
+      <p>
+        Log out
+      </p>
+    </div>
+
+    <div class="address-fill-forms">
+      <div>
+        <h3>Shipping address</h3>
+      </div>
+      <div class="address-fill-forms-inputs">
+        <form ng-submit="postAddress(address)" >
+
+        <input ng-model="address.name" placeholder="First name" size="30" type="text" required/>
+        <input ng-model="address.lastname" placeholder="Last name" size="30" type="text" required/>
+        <input ng-model="address.company" placeholder="Company (optional)" />
+        <input ng-model="address.street" placeholder="Address" required/>
+        <input ng-model="address.apt" placeholder="Apt, suite, etc (optional)"/>
+        <input ng-model="address.city" placeholder="City" required/>
+        <select ng-model="address.country" required>
+          <option value="United States">
+            United States
+          </option>
+        </select>
+        <Select required ng-model="address.state" ng-init="state = stateArr[0]" ng-options="state for state in stateArr" placeholder="State"/>
+        <input ng-model="address.zipcode" placeholder="Zip code" required />
+        <input ng-model="address.phone" placeholder="Phone" required/>
+        <button  type="submit" >Continue to Payment method</button>
+        </form>
+      </div>
+
+
+
+
+    </div>
+    <div class="address-fill-return">
+
+    </div>
+  </div>
+
+
+</div>
+<div class="address-footer">
+  <p>
+    Refund policy
+  </p>
+  <p>
+    Privacy policy
+  </p>
+  <p>
+    Terms of  service
+  </p>
+</div>

@@ -1,0 +1,198 @@
+<nav >
+  <div class="logo-nav-container">
+    <div class="main-filler">
+    </div>
+
+    <div ui-sref="home" class="main-logo">
+    </div>
+    <div  class="main-account">
+      <!-- search div -->
+      <div class="main-account-nav" >
+        <div class="main-account-search">
+          <p >
+            Search
+          </p>
+          <i  class="fa fa-search fa-lg" aria-hidden="true"></i>
+        </div>
+        <!-- account div -->
+        <div  class="main-account-account">
+          <p >
+            Account
+          </p>
+          <i class="fa fa-user fa-lg" aria-hidden="true"></i>
+        </div>
+      </div>
+      <!-- search -->
+
+      <form ng-submit="goToSearch(searchCollection)">
+      <div  style="display: none;" class="main-account-search-input">
+        <input ng-model="searchCollection" placeholder="Search store..."  />
+        <i ng-click="goToSearch(searchCollection)" class="fa fa-search fa-lg" aria-hidden="true"></i>
+        <i id="nav-search-x" class="fa fa-times search-x" aria-hidden="true"></i>
+      </div>
+    </form>
+
+
+
+      <!-- log in -->
+
+      <div id="login-signup" style="display: none"  class="main-account-login">
+
+        <p >
+          <a ui-sref="accountLogin">Log In</a>
+          or
+          <a ui-sref="createAccount">Sign Up</a>
+        </p>
+        <i id="nav-account-x" class="fa fa-times account-x" aria-hidden="true"></i>
+      </div>
+      <div id="view-account-logout" style="display: none"  class="main-account-login">
+
+        <p>
+          <a ui-sref="account">View Account(Logged in as )</a>
+          ||
+          <a ui-sref="account">Logout</a>
+        </p>
+        <i id="nav-account-xx" class="fa fa-times account-x" aria-hidden="true"></i>
+      </div>
+      <!-- ======================= -->
+
+    </div>
+  </div>
+
+  <div class="nav-collections">
+    <div class="nav-collections-filler">
+
+    </div>
+    <div class="nav-collections-ul">
+      <ul>
+        <li ng-click="getList('SHOP')" class="web-li">
+          SHOP
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </li>
+
+        <li ng-click="getList('BOXING')"class="web-li">
+          BOXING
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </li>
+
+        <li ng-click="getList('MARTIAL ARTS')" class="web-li">
+          MARTIAL ARTS
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </li>
+
+        <li ng-click="getList('BASEBALL')" class="web-li">
+          BASEBALL
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </li>
+
+        <li ng-click="getList('BASKETBALL')" class="web-li">
+          BASKETBALL
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </li>
+
+        <li ng-click="getList('FOOTBALL')" class="web-li">
+          FOOTBALL
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </li>
+
+        <li ng-click="getList('COLLECTIONS')" class="web-li">
+          COLLECTIONS
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </li>
+
+        <li ng-click="getList('BLOG')" class="web-li">
+          BLOG
+        </li>
+
+
+        <li class="responsive-li">
+          <div id="nav-collections-ham-container">
+            <div  id="nav-collections-ham-burger">
+              <span>&nbsp;</span>
+              <span>&nbsp;</span>
+              <span>&nbsp;</span>
+            </div>
+          </div>
+        </li>
+        <li  class="responsive-li">
+          <i id="searchlogo-mobile" class="fa fa-search fa-lg" aria-hidden="true"></i>
+        </li>
+        <li id="accountlogo-mobile" ng-click="goToAccount()"class="responsive-li">
+          <i class="fa fa-user fa-lg" aria-hidden="true"></i>
+        </li>
+        <li ng-click="goToCart()" id="cartlogo-mobile"  class="responsive-li">
+          <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>
+        </li>
+
+        <form  ng-submit="goToSearch(searchCollection)">
+        <li  class="responsive-li-search">
+          <input ng-model="searchCollection" />
+          <i ng-click="goToSearch(searchCollection)" class="fa fa-search fa-lg" aria-hidden="true"></i>
+        </li>
+      </form>
+        <li  class="responsive-li-search">
+          <i id="account-x-mobile-search" class="fa fa-times account-x" aria-hidden="true"></i>
+        </li>
+      </ul>
+
+    </div>
+    <div ng-click="goToCart()" class="nav-collections-filler" >
+      <div class="nav-collections-filler-cart">
+        <p>
+          Cart &nbsp;
+        </p>
+
+        <p>
+          {{cartLength}}
+        </p>
+        <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>
+
+      </div>
+    </div>
+  </div>
+  <!-- ui-sref="bio({id: plz.id})" -->
+  <div class="web-li-dropdown" >
+    <p ng-click="shopCollection({l})" ui-sref="shopCollection({id: l.toLowerCase()})" ng-repeat="l in menuList">
+      {{l}}
+    </p>
+  </div>
+  <div id="mobile-collection-dropdown" class="mobile-collection-div">
+    <ul class="mobile-collection-ul">
+      <li class="mobile-collection-li" ng-click="getList('SHOP')" class="web-li">
+        SHOP
+      </li>
+
+      <li class="mobile-collection-li" ng-click="getList('BOXING')"class="web-li">
+        BOXING
+      </li>
+
+      <li class="mobile-collection-li" ng-click="getList('MARTIAL ARTS')" class="web-li">
+        MARTIAL ARTS
+      </li>
+
+      <li class="mobile-collection-li" ng-click="getList('BASEBALL')" class="web-li">
+        BASEBALL
+      </li>
+
+      <li class="mobile-collection-li" ng-click="getList('BASKETBALL')" class="web-li">
+        BASKETBALL
+      </li>
+
+      <li class="mobile-collection-li" ng-click="getList('FOOTBALL')" class="web-li">
+        FOOTBALL
+      </li>
+
+      <li class="mobile-collection-li" ng-click="getList('COLLECTIONS')" class="web-li">
+        COLLECTIONS
+      </li>
+
+
+    </ul>
+    <div class="mobile-li-dropdown" >
+      <p ng-click="shopCollection({l})" ui-sref="shopCollection({id: l.toLowerCase()})" ng-repeat="l in menuList">
+        {{l}}
+      </p>
+    </div>
+
+  </div>
+</nav>

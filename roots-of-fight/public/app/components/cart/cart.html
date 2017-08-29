@@ -1,0 +1,45 @@
+<nav-dir></nav-dir>
+<div class="cart-main-container">
+  <div class="cart-header">
+    <h2>Your Cart</h2>
+  </div>
+
+  <div class="cart-products">
+    <ul class="cart-products-ul-1">
+      <li class="cart-products-li-1" ng-repeat="p in products">
+        <ul class="cart-products-ul-2">
+          <li>
+            <img src="{{p.img[0]}}" />
+          </li>
+          <li>
+            <p>
+              {{p.name}} - {{p.size}}
+            </p>
+
+          </li>
+          <li>
+              <input min="1"  type="number" ng-change="updateQty(p.qty, p.order_id)" ng-model="p.qty" value="{{p.qty}}"/>
+          </li>
+          <li>
+            <p>
+              {{p.price | currency}}
+          </li>
+          <li>
+            <i ng-click="Delete(p.order_id)" class="fa fa-times" aria-hidden="true"></i>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="cart-checkout">
+    <h4>SUBTOTAL {{totalPrice | currency}}</h4>
+    <button ng-click="updatedCart()">UPDATE CART</button>
+    <p>
+      or
+    </p>
+    <button ui-sref="address" >CHECK OUT</button>
+  </div>
+
+</div>
+<footer-dir></footer-dir>

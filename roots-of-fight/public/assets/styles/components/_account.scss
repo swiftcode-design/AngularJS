@@ -1,0 +1,121 @@
+.create-account-container{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  color: white;
+  p {
+    color: $red;
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  input{
+    background: black;
+    border: solid 1px #262626;
+    height: 20px;
+    width: 250px;
+    color: white;
+  }
+  div{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    button{
+      padding: 10px;
+      background: $red;
+      color: white;
+      border: none;
+      font-size: 13px;
+      border-radius: 3px;
+      margin-right: 10px;
+    }
+    p{
+      margin: 0 0 0 10px;
+    }
+  }
+}
+.account-details-container{
+  color: white;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  div:first-child{
+    width: 50%;
+    p{
+      font-size: 12px;
+      span{
+        color:$red;
+        cursor: pointer;
+      }
+    }
+    button{
+      background: none;
+      border: none;
+      p{
+        color: white;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+  div:nth-child(2){
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 12px;
+    p:nth-child(2){
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}
+
+.account-login{
+  color: white;
+  width: 90%;
+  margin: 0 auto;
+  div:first-child{
+    width: 50%;
+    p{
+      font-size: 12px;
+      span{
+        color:$red;
+        cursor: pointer;
+      }
+    }
+  }
+  form{
+    input{
+      background: black;
+      border: solid 1px #262626;
+      height: 20px;
+      width: 250px;
+      color: white;
+    }
+    div{
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      button{
+        padding: 10px;
+        background: $red;
+        color: white;
+        border: none;
+        font-size: 13px;
+        border-radius: 3px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+      p{
+        margin: 0 0 0 10px;
+        font-size: 12px;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+    }
+  }
+}

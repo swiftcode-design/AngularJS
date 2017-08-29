@@ -1,0 +1,31 @@
+<nav-dir></nav-dir>
+<div account-login class="account-login">
+
+
+  <div>
+    <h2>Login</h2>
+    <p>
+      <span>Home</span> / Account
+    </p>
+  </div>
+
+  <form ng-submit="login(user)">
+    <p>
+      Email Address
+    </p>
+    <input ng-model="user.email" />
+    <p>
+      Password
+    </p>
+    <input ng-model="user.password"/>
+    <div>
+      <button type="submit">log in</button>
+      or
+      <p ui-sref="createAccount">
+        Register a New Account
+      </p>
+    </div>
+
+  </form>
+</div>
+<footer-dir></footer-dir>

@@ -1,0 +1,83 @@
+<div class="order-summary-main-container">
+  <div class="summary-order-summary-header">
+    <div class="summary-order-summary-header-left">
+
+      <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+      <p>Show order summary</p>
+      <i class="fa fa-chevron-down" aria-hidden="true"></i>
+
+    </div>
+    <div class="summary-order-summary-header-right">
+      <h3>{{totalPrice | currency}} USD</h3>
+    </div>
+
+  </div>
+
+  <div class="summary-order-main-summary">
+    <div class="summary-order-products">
+      <ul class="summary-order-products-ul">
+        <li ng-repeat="p in products">
+          <div >
+            <img src="{{p.img[0]}}" />
+            <span>{{p.qty}}</span>
+            <div>
+              <p>
+                {{p.name}}
+              </p>
+              <h6>
+                {{p.size}}
+              </h6>
+            </div>
+
+
+          </div>
+          <div>
+            {{p.price | currency}}
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="summary-order-giftcard">
+      <input placeholder="Gift card or discount code" />
+      <i class="fa fa-arrow-circle-right fa-2x" aria-hidden="true"></i>
+
+    </div>
+    <div class="summary-order-shipping">
+      <div>
+        <p>
+          Subtotal
+        </p>
+        <p>
+          {{totalPrice | currency}} USD
+        </p>
+      </div>
+
+      <div>
+        <p>
+          Shipping & Handling
+        </p>
+        <p>
+          Free
+        </p>
+      </div>
+    </div>
+    <div class="summary-order-total">
+      <div>
+        <p>
+          Total
+        </p>
+      </div>
+      
+      <div>
+        <h5>
+          USD
+        </h5>
+        <h1>{{totalPrice | currency}} USD</h1>
+      </div>
+
+
+    </div>
+  </div>
+<!-- {{products}} -->
+
+</div>

@@ -1,0 +1,20 @@
+.search-main-container{
+  color: white;
+  display:flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  border-top: solid 1px #444444;
+  border-bottom: solid 1px #444444;
+
+  div:first-child{
+    width: 20%;
+    img{
+      width: 80%;
+      padding: 10px;
+    }
+  }
+  div:nth-child(2){
+    width: 80%;
+  }
+}

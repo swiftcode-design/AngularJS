@@ -1,0 +1,74 @@
+<nav-dir></nav-dir>
+<div home-dir class="img-slider-container">
+
+  <ul class="img-div" >
+    <li class="img-div-li" ng-repeat="i in mainImgSlider">
+      <img src="{{i}}" />
+    </li>
+  </ul>
+
+  <i class="fa fa-circle fa-lg img-i-1" aria-hidden="true"></i>
+  <i class="fa fa-circle fa-lg img-i-2" aria-hidden="true"></i>
+
+</div>
+
+<div class="home-product-slider-container">
+  <div class="home-product-slider-header">
+    <h3>
+      NEW RELEASES
+    </h3>
+  </div>
+  <div class="home-product-slider-ul-container-wrapper">
+
+
+  <div class="img-slider-controls">
+    <i id="img-slider-control-1" class="fa fa-chevron-left fa-3x" aria-hidden="true"></i>
+  </div>
+  <div class="img-slider-controls-mobile">
+    <i id="img-slider-control-1-mobile" class="fa fa-chevron-left fa-3x" aria-hidden="true"></i>
+  </div>
+
+    <div class="home-product-slider-ul-container">
+      <ul class="home-product-slider-ul">
+        <li ui-sref="productDetails({id: new.collections, name: new.name})" class="home-product-slider-li" ng-repeat="new in newReleases">
+          <img class="home-product-slider-li-img" src="{{new.jsonb_agg[0]}}" />
+          <div class="home-product-slider-li-div">
+            <h4>{{new.name}}</h4>
+            <p>ROOTS OF {{new.roots | uppercase}}</h5>
+            <p>{{new.price | currency}} USD</h5>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="home-product-slider-ul-container-mobile">
+      <ul class="home-product-slider-ul-mobile">
+        <li ui-sref="productDetails({id: new.collections, name: new.name})" class="home-product-slider-li-mobile" ng-repeat="new in newReleases">
+          <img class="home-product-slider-li-img-mobile" src="{{new.jsonb_agg[0]}}" />
+          <div class="home-product-slider-li-div-mobile">
+            <h4>{{new.name}}</h4>
+            <p>ROOTS OF {{new.roots | uppercase}}</h5>
+            <p>{{new.price | currency}} USD</h5>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="img-slider-controls">
+      <i id="img-slider-control-2"  class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
+    </div>
+    <div class="img-slider-controls-mobile">
+      <i id="img-slider-control-2-mobile"  class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
+    </div>
+
+  </div>
+</div>
+
+<div class="collections-ad-container" >
+  <ul>
+    <li ui-sref="shopCollection({id: img.name})" ng-repeat="img in collectionImgs">
+      <img src={{img.imgUrl}} />
+    </li>
+  </ul>
+
+</div>
+<footer-dir></footer-dir>

@@ -1,0 +1,94 @@
+<nav-dir></nav-dir>
+<div class="details-main-container">
+  <div class="details-nav">
+    <a ui-sref="home">Home</a> &nbsp; / &nbsp; Collections &nbsp; / &nbsp; <span>{{productCollection}}</span> &nbsp; / &nbsp; {{productName}}
+  </div>
+  <div class="details-product-div">
+
+
+      <div class="details-product-order">
+        <h2>{{product[0].name}}</h2>
+        <h3>ROOTS OF {{product[0].roots.toUpperCase()}}</h3>
+        <h1>{{product[0].price | currency}} USD</h1>
+        <div class="size-dropdown">
+          <p >
+            Size
+          </p>
+
+          <select ng-model="pSize" ng-init="pSize = sizeUl[0]" ng-options="size.size for size in sizeUl"  >
+          </select>
+        </div>
+
+        <div class="details-product-order-add-cart">
+          <div class="details-product-order-qty">
+            <label>Quantity</label>
+            <input ng-model="qty" ng-init="qty = 1" type="number" min="1" value="1" />
+          </div>
+          <!-- <button ng-click="testu(pSize)"></button> -->
+          <button ng-click="addToCart(product[0].id, pSize, qty)">ADD TO CART</button>
+        </div>
+
+        <div class="details-product-order-larg-img">
+
+            <img src="{{product[0].jsonb_agg[0]}}" />
+
+
+        </div>
+        <ul>
+          <li ng-repeat="img in product[0].jsonb_agg">
+            <img ng-click="test(img)" src="{{img}}" />
+          </li>
+        </ul>
+
+
+      </div>
+
+      <div class="details-product-img">
+        <div class="details-product-img-inner">
+          <img src="{{mainImg}}" />
+        </div>
+
+      </div>
+
+      <div class="details-product-order-2">
+        <h2>{{product[0].name}}</h2>
+        <p>
+          {{product[0].info}}
+        </p>
+        <h3>SKU {{product[0].sku}}</h3>
+        <h3>All prices are in USD</h3>
+        <p>
+          ALL Sale and Discounted items may not be returned for a refund.  Sale items can be exchanged for a different size in the SAME style only.
+        </p>
+        <p>
+          DESCRIPTON
+        </p>
+        <ul>
+          <li>
+            {{product[0].fit}}
+          </li>
+          <li>
+            Fiber Content{{product[0].fiber}}
+          </li>
+          <li>
+            Modeled in size M. See Size Guide for garment dimensions.
+          </li>
+          <li>
+            We reserve the right to make garment substitutions.
+          </li>
+          <li>
+            Please note some styles may be delivered via separate shipments.
+          </li>
+          <li>
+            Purchaser responsible for any applicable duty charges.
+          </li>
+          <li>
+            Usually Ships out in 5 to 7 Business Days
+          </li>
+        </ul>
+      </div>
+
+  </div>
+
+</div>
+<footer-dir></footer-dir>

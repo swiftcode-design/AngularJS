@@ -1,0 +1,93 @@
+.address-main-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  .address-main-logo{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+    img{
+      width: 150px;
+      padding: 20px;
+    }
+  }
+  .address-fill-address{
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    width: 90%;
+    // background: green;
+    color: white;
+    .address-fill-customer-info{
+      p{
+        padding: 0 20px;
+      }
+      p:nth-child(2){
+        color: $red;
+      }
+    }
+    .address-fill-forms{
+      // background: blue;
+      .address-fill-forms-inputs{
+        display: flex;
+        flex-wrap: wrap;
+        // background: purple;
+        justify-content: space-between;
+        form{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          input, select{
+            width: calc(90%/3);
+            height: 40px;
+            background: #1A1A1A;
+            color: white;
+            border-radius: 10px;
+            border: solid 1px #444444;
+            margin: 5px 0;
+            font-size: 15px;
+          }
+          button{
+            width: 50%;
+            height: 50px;
+            border-radius: 5px;
+            border: solid 1px #444444;
+            background: $red;
+            font-size: 20px;
+            color: white;
+          }
+        }
+
+
+        @media(max-width: 768px){
+          form{
+            input{
+              width: 100%;
+            }
+            button{
+              font-size: 15px;
+            }
+          }
+
+        }
+      }
+
+    }
+  }
+
+}
+.address-footer{
+  display: flex;
+  border-top: solid 1px #262626;
+  margin-top: 30px;
+  width: 90%;
+  margin: 40px auto;
+  p{
+    font-size: 10px;
+    color: $red;
+    margin-right: 10px;
+  }
+
+}

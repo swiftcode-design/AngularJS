@@ -1,0 +1,286 @@
+body, html{
+  font-family: "Roboto";
+  margin: 0;
+  background: black;
+  a{
+    color:white;
+    text-decoration: none;
+  }
+}
+nav{
+  color: white;
+  background: #000000;
+  overflow: hidden;
+  margin-bottom: 50px;
+  .logo-nav-container{
+    width: 90%;
+    height: 132px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    .main-filler{
+      height: 100%;
+      width: 200px;
+    }
+    .main-logo{
+      cursor: pointer;
+      height: 100%;
+      width: 300px;
+      display: flex;
+      justify-content: center;
+      background-image: url('./assets/images/main/checkout_logo_image.png');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .main-account{
+      height: 100%;
+      width: 200px;
+      font-size: 13px;
+      color: #858585;
+      .main-account-search-input{
+        margin-top: 20px;
+        position: relative;
+        input{
+          height: 20px;
+          width: 90%;
+          border: solid 1px #444444;
+          background: black;
+          color: white;
+        }
+        .fa-search{
+          cursor: pointer;
+          position: absolute;
+          right: 10%;
+          top: 18%;
+        }
+        .search-x{
+          cursor: pointer;
+          color: white;
+          padding: 5px 0 0 2px;
+        }
+      }
+      .main-account-search{
+        width: 45%;
+        float: right;
+        p{
+          cursor: pointer;
+          float: left;
+          margin-top: 2em;
+        }
+        i{
+          cursor: pointer;
+          float: left;
+          margin-left: 10px;
+          margin-top: 1.2em;
+        }
+
+      }
+      .main-account-account{
+        float: right;
+        width: 47%;
+        p{
+          cursor: pointer;
+          float: left;
+          margin-top: 2em;
+        }
+        i{
+          cursor: pointer;
+          float: left;
+          margin-left: 10px;
+          margin-top: 1.4em;
+        }
+      }
+      .main-account-login{
+        display: flex;
+        margin: 13px 0 0 13px;
+        .account-x{
+          padding: 14px 0 0 10px;
+        }
+      }
+    }
+  }
+  @media(max-width: 768px){
+    .logo-nav-container{
+      justify-content: center;
+      .main-account, .main-filler{
+        display: none;
+      }
+    }
+  }
+  .nav-collections{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    .nav-collections-filler{
+      width: 10%;
+      min-height: 100%;
+      .nav-collections-filler-cart{
+        color: $red;
+        display: flex;
+        justify-content: flex-end;
+        font-size: 13px;
+        p{
+          margin: 25px 0;
+          cursor: pointer;
+        }
+        i{
+          cursor: pointer;
+          margin: 25px 10px;
+        }
+      }
+      @media(max-width: 768px){
+        .nav-collections-filler-cart{
+          display: none;
+        }
+      }
+    }
+    .nav-collections-ul{
+      width: 80%;
+      background: black;
+      ul{
+        list-style: none;
+        font-size: 1em;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .web-li{
+          margin: 10px 20px;
+          cursor: pointer;
+          i{
+            cursor: pointer;
+            font-size: 10px;
+            padding: 0 0 0 5px;
+            transition: all ease-in-out 0.4s;
+          }
+        }
+        .responsive-li{
+          cursor: pointer;
+          display: none;
+        }
+        .responsive-li-search{
+          display: none;
+          li:first-child{
+            width: 90%;
+          }
+          li:nth-child(2){
+            width: 10%;
+          }
+        }
+
+      }
+      .mobile-collection-li{
+
+      }
+    }
+    @media(max-width: 768px){
+      .nav-collections-ul{
+        width: 250px;
+        ul{
+          margin: 0 auto;
+          padding: 0;
+          justify-content: space-between;
+          // background: green;
+          .web-li{
+            display: none;
+          }
+          form{
+            margin: 0;
+            padding: 0;
+          }
+          .responsive-li{
+            display: flex;
+            margin: 0;
+            padding: 20px 0;
+            #nav-collections-ham-container{
+              position: relative;
+              #nav-collections-ham-burger{
+                cursor: pointer;
+                span{
+                  background: white;
+                  display: block;
+                  width: 20px;
+                  height: 3px;
+                  margin-bottom: 5px;
+                  position: relative;
+                  top: 0;
+                  transition: all ease-in-out 0.4s;
+                }
+              }
+              #nav-collections-ham-burger.anime{
+                span:nth-child(1){
+                  transform: rotate(-45deg);
+                  top: 9px;
+                }
+                span:nth-child(2){
+                  width: 0;
+                  opacity: 0;
+                }
+                span:nth-child(3){
+                  transform: rotate(45deg);
+                  top: -7px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .web-li-dropdown{
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    height: 0;
+    transition: all ease-in-out 0.4s;
+    p{
+      cursor: pointer;
+    }
+  }
+  .mobile-collection-div{
+    display: none;
+  }
+  .mobile-collection-div{
+    height: 0;
+    overflow: hidden;
+  }
+  #mobile-collection-dropdown{
+    display: none;
+    overflow: hidden;
+  }
+  @media(max-width: 768px){
+    .web-li-dropdown{
+      display: none;
+    }
+
+    .mobile-collection-div{
+      display: flex;
+      div, ul{
+        width: calc(100%/2);
+        font-size: 12px;
+      }
+      .mobile-collection-ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        .mobile-collection-li{
+          padding: 20px 0;
+        }
+      }
+      .mobile-li-dropdown{
+        display: flex;
+        flex-direction: column;
+        background: #111111;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+@media(max-width: 768px){
+  .nav-collections-ul{
+    ul{
+      display: none;
+    }
+  }
+}

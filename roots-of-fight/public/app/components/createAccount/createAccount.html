@@ -1,0 +1,30 @@
+<nav-dir></nav-dir>
+<div class="create-account-container">
+  <h1>Create Account</h1>
+  <p ui-sref="home">
+    Home
+  </p>
+  <form ng-submit="createUser(user)">
+    <h4>First name</h4>
+    <input ng-model="user.firstname" required/>
+
+    <h4>Last name</h4>
+    <input ng-model="user.lastname"  required/>
+
+    <h4>Email Address</h4>
+    <input ng-model="user.emailaddress"  required/>
+
+    <h4>Password</h4>
+    <input  pattern=".{6,}" type="password" ng-model="user.password" required/>
+    <div>
+      <button type="submit">Create</button>
+        or
+      <p>
+        Login to an existing Account
+      </p>
+    </div>
+
+
+  </form>
+</div>
+<footer-dir></footer-dir>
