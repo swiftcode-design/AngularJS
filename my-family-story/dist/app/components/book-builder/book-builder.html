@@ -1,0 +1,58 @@
+<div class="main-gray-bg">
+  <div class="container">
+    <div class="row" ng-if="userBooks.length !== 0">
+      <div class="col-md-12 project-header">
+        <div class="flex-center">
+          <button class="btn btn-blue flexed" ng-click="openViewProjectsModal()">View All Projects</button>
+          <button class="btn btn-blue flexed" ng-click="openNewProjectModal()">Create New Project</button>
+          <button class="btn btn-blue flexed" ng-click="openReviewModal()">Review Page Options</button>
+        </div>
+      </div>
+    </div>
+    <div class="row project-header" ng-if="userBooks.length === 0">
+      <div class="col-md-6 col-md-offset-3">
+        <h3>Every great story begins with a title.</h3>
+        <div class="row">
+          <form>
+            <div class="row">
+              <div class="col-md-12">
+                <input class="form-control" id="bookTitle" placeholder="Name Your Story" ng-model="bookTitle">
+              </div>
+            </div>
+            <div class="row pad-top-sm">
+              <div class="col-md-12 text-center">
+                <button class="btn btn-blue" ng-click="createNewBook(bookTitle, '', user)">Continue</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="row" bookbuilder-dir>
+      <div class="col-md-12">
+        <h2 class="upper">{{currentBook.title}} </h2><i id="bbPencil" class="fa fa-pencil" aria-hidden="true"></i>
+        <input class="upperInput" ng-model="currentBook.title" />
+        <div ng-repeat="page in pages track by $index">
+          <book-page class="row" page="page" index="$index"></book-page>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-12 text-right">
+          <button class="btn btn-blue" id="addPage" ng-click="addNewPage()">+ Page</button>
+        </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 bottom-buttons">
+        <button animate-fade condition="saved" class="btn btn-yellow left-btn" ng-click="saveBook()">SAVE PROJECT</button>
+        <!--<button class="btn btn-yellow left-btn" ng-click="saveBook()" ng-if="saved === false">SAVE PROJECT</button>
+        <button class="btn btn-green left-btn" ng-if="saved === true">PROJECT SAVED</button>-->
+        <button class="btn btn-green right-btn" ng-click="selectPrints()">SELECT PRINT QTY</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="modal-header">
+  <h3>Book Delivery Options</h3>
+</div>
+<div class="modal-body prints-modal">
+  <div class="prints-left" ng-init="printBool = true">
+    <div class="input-wrapper">
+      <div class="foobar">
+        <input type="radio" name="printSelection" ng-model="printBool" ng-value="true" />
+      </div>
+      <div class="input-label">
+        <p>Free digital download (PDF)</p>
+      </div>
+    </div>
+    <div class="input-wrapper">
+      <div class="foobar">
+        <input type="radio" name="printSelection" ng-model="printBool" ng-value="false" />
+      </div>
+      <div class="input-label">
+        <p>Printed and bound copies (select a bundle)</p>
+      </div>
+    </div>
+  </div>
+  <div class="prints-right">
+    <div ng-show="printBool">
+      Once your project is complete, you will receive a free digital copy via email.
+    </div>
+    <div ng-show="!printBool">
+      <prints-dropdown prints-selection="selectedPrints"></prints-dropdown>
+    </div>
+  </div>
+</div>
+<!--end modal body-->
+
+<div class="modal-footer">
+  <button class="btn btn-yellow" type="button" ng-click="cancel()">CANCEL</button>
+  <button class="btn btn-green" type="button" ng-click="sendToCart()">SEND TO CART</button>
+</div>

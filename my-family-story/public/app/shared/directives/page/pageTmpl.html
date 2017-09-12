@@ -1,0 +1,52 @@
+<div class="custom-page {{'con' + index}} pageinitial col-md-12">
+   <div class="row">
+     <div class="col-md-12">
+        <h5 class="page-number">PAGE {{page.page_number}}</h5>
+        <a class="delete-box hazard-link {{'page' + index}}" id="deleter"  
+        ng-click="openAlertModal()"> 
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </a>
+      </div>
+   </div>
+   <div class="row main-body">
+      <div class="col-md-7">
+         <form>
+            <div class="form-group">
+               <label for="textForPage">Text</label>
+               <textarea rows="2" class="form-control" id="textForPage" ng-model="page.text"></textarea>
+            </div>
+            <div class="form-group">
+               <label for="textSimple" class="tiny-text">Would you like this text edited to be simpler or more kid friendly?</label>
+               <select class="select-box" id="textSimple" ng-options="allow.value as allow.name for allow in allowTypes" ng-model="page.edit_allowed">
+               </select>
+            </div>
+         </form>
+      </div>
+      <div class="col-md-5">
+         <form>
+            <div class="form-group">
+               <label for="typeOfPage">Page Type</label>
+               <select class="select-box" id="typeOfPage" ng-options="type.value as type.name for type in pageTypes" ng-model="page.page_type"></select>
+            </div>
+            <div class="form-group" ng-if="page.page_type=='Activity'">
+               <label for="typeOfActivity">Type of Activity</label>
+               <select class="select-box" id="typeOfActivity" ng-options="activity.value as activity.name for activity in activity_types" ng-model="page.activity_type">
+               </select>
+            </div>
+            <div class="form-group" ng-if="page.page_type==='Activity'">
+               <label for="customActivity">Activity Description</label>
+               <input type="text" class="form-control input-sm" id="customActivity" ng-model="page.custom_activity">
+            </div>
+            <div class="form-group" ng-if="page.page_type==='Portrait'">
+              <div>
+                <s3-uploader repeat-id="index" max-width="1200" max-height="1200" default-text="Upload Photo" success-text="Complete!" s3-url="page.image_url"></s3-uploader>
+              </div>
+              <div ng-if="page.image_url" class="img-preview">
+                <img ng-src="{{page.image_url}}"/>
+              </div>
+            </div>
+
+         </form>
+      </div>
+   </div>
+</div>

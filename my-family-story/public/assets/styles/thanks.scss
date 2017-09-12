@@ -1,0 +1,31 @@
+.thanks-wrapper {
+  height: calc(100vh - 110px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url(./assets/images/WoodBackgroundDesat.jpg) no-repeat center center fixed;
+  background-size: cover;
+
+  h1 {
+    text-transform: uppercase;
+  }
+
+  h1, a {
+    text-align: center;
+    color: white;
+  }
+
+  a:hover {
+    color: white;
+  }
+
+  .center {
+    display: block;
+    margin: 20px auto;
+  }
+
+  .btn-lg {
+    width: 250px;
+  }
+
+}

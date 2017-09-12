@@ -1,0 +1,37 @@
+<div class="container orders-view">
+  
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="admin-view-title">All Active Orders</p>
+        </div>
+        <div class="col-md-6 admin-filters" ng-init="orderPredicate='date'">
+          <span>
+            <span class="admin-filters-title">sort by:</span>
+            <input type="radio" ng-model="orderPredicate" ng-value="'date'" /> date
+            <input type="radio" ng-model="orderPredicate" ng-value="'firstname'" /> name
+          </span>
+          <input class="admin-input" type="text" placeholder="Filter orders" ng-model="filterPredicate" />
+        </div>
+      </div>
+
+      <table class="table orders-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Total pages</th>
+            <th>Date</th>
+            <th>Transaction ID</th>
+            <th>Archive</th>
+          </tr>
+        </thead>
+        <tbody orders-table all-orders="allOrders" toggle-switch="archive" filter-predicate="filterPredicate" order-predicate="orderPredicate">
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+</div>

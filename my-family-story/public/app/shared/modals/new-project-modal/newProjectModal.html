@@ -1,0 +1,23 @@
+<div class="modal-header">
+  <h2 class="modal-title text-center">Create a New Project</h2>
+</div>
+<div class="modal-body">
+  <div class="row">
+    <form>
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 text-center">
+          <input type="text" class="form-control" placeholder="New Project Title" ng-model="newBookTitle"/>
+          <button class="btn btn-blue btn-add-project" ng-click="createNewBook()">ADD NEW PROJECT</button>
+        </div>
+      </div>
+      <div class="row text-center pad-top-sm">
+        <!--<div class="col-md-6">
+          <s3-uploader max-width="1200" max-height="1200" default-text="Upload Photo" success-text="Photo Uploaded!" s3-Url></s3-uploader>
+        </div>-->
+      </div>
+    </form>
+  </div>
+</div> <!--end modal body-->
+<div class="modal-footer">
+  <button class="btn btn-yellow" type="button" ng-click="close()">CLOSE</button>
+</div>

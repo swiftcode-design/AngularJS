@@ -1,0 +1,21 @@
+<tr ng-repeat="product in ctrl.allProducts | orderBy : product.price : true track by $index">
+  <td class="product-title">
+    {{product.name}}
+  </td>
+  <td class="product-desc">
+    <i class="fa fa-pencil" aria-hidden="true"></i>
+    <textarea class="desc-input" ng-model="product.description">{{product.description}}</textarea>
+  </td>
+  <td>
+    <img ng-src="{{product.image1}}" />
+  </td>
+  <td class="product-price">
+    <i class="fa fa-pencil" aria-hidden="true"></i>
+    <input type="text" ng-model="product.price"  />
+  </td>
+    <td colspan="4" class="submit-button">
+    <a class="btn btn-yellow" ng-click="ctrl.submitProductChanges(product)">
+      Submit Changes
+    </a>
+  </td>
+</tr>

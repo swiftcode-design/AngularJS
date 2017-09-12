@@ -1,0 +1,113 @@
+
+.imgSlider{
+  height: 210px;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  @media screen and (max-width: 562px){
+    display: none;
+  }
+}
+.book-project-holder{
+  position: relative;
+  width: 170px;
+  width: 450px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 210px;
+  display: flex;
+  padding-left: 0;
+  padding-right: 0;
+}
+.book-project-holder.bookArrLength{
+  justify-content: center;
+  flex-direction: row;
+}
+.imgSliderAbs{
+  position: absolute;
+  display: flex;
+  transition: all 0.5s ease-in-out;
+}
+#imgSliderTest1, #imgSliderTest2{
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: 100px;
+  color: rgb(183, 181, 181);
+  font-weight: 400;
+  font-size: 30px;
+}
+#imgSliderTest2{
+  transform: scaleX(-1);
+}
+// mobile===============
+.imgSlider2{
+  height: 210px;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  @media screen and(min-width: 563px){
+    display: none;
+  }
+}
+.book-project-holder2{
+  position: relative;
+  width: 170px;
+  width: 182px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 210px;
+  display: flex;
+  .project {
+     width: 175px;
+     height: 193px;
+     border: 2px solid #888;
+     border-radius: 3px;
+     margin: 0 5px;
+     color: #222;
+
+     .centered {
+        margin: 50% auto;
+        padding: 0 10px;
+        text-align: center;
+        transform: translate(0, -50%);
+     }
+  }
+  .project:hover{
+     -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,1);
+     -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,1);
+     box-shadow: 0px 0px 2px 0px rgba(0,0,0,1);
+  }
+}
+.book-project-holder2.bookArrLength{
+  // justify-content: center;
+  // flex-direction: row;
+}
+.imgSliderAbs2{
+  position: absolute;
+  display: flex;
+  transition: all 0.5s ease-in-out;
+}
+#imgSliderTest12, #imgSliderTest22{
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: 83px;
+  color: rgb(183, 181, 181);
+  font-weight: 400;
+  font-size: 30px;
+  margin-left: 10px;
+}
+#imgSliderTest22{
+  margin-right: 9px;
+  transform: scaleX(-1);
+}
+// .imgSliderAnime{
+//   animation: 1s imgSliderAnime 1 forwards;
+// }
+@keyframes imgSliderAnime{
+  0%{
+    transform: translateX(150px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}

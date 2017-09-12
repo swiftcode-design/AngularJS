@@ -1,0 +1,47 @@
+.accountHeader, .accountHeaderShipping{
+  margin-top: 100px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.userInfoDiv{
+
+  i{
+    margin-right: 7px;
+    font-size: 11px;
+    transform: rotate(-90deg) translatex(3.5px);;
+
+  }
+  input{
+    outline-width: 0;
+    border: 0;
+    margin-bottom: 50px;
+    min-width: 4px;
+    width: 50%;
+  }
+
+}
+.accountAddressMainDiv{
+  display: none;
+}
+#accountSavedAlert, #accountSavedAlert2{
+  color: red;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+#accountSavedAlert.alertSave, #accountSavedAlert2.alertSave{
+  opacity: 1;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: black;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: black;
+   opacity: 1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: black;
+   opacity: 1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: black;
+}

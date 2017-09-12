@@ -1,0 +1,9 @@
+{
+    "verbose": true,
+    "ignore": [
+      "public"
+      ],
+    "watch": [
+      "server/*"
+      ]
+}

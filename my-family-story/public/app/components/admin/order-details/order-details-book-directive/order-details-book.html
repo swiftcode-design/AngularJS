@@ -1,0 +1,15 @@
+<div class="col-md-12">
+  <div class="row order-details-book-title">
+    <div class="col-md-11">
+      <span>Book {{bookNumber + 1}}</span><span></span><span>{{book.title}}</span>
+    </div>
+    <div class="col-md-1 show-hide-toggle">
+      Collapse
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 order-details-book-page" ng-repeat="page in book.pages">
+      <div class="row" order-details-book-page></div>
+    </div>
+  </div>
+</div>

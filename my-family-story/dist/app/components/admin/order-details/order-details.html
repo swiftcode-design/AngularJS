@@ -1,0 +1,57 @@
+<div class="container orders-view">
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="sub-nav">
+        <div>Details for Order {{abbreviatedId}}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row user-info">
+    <div class="col-md-4">
+      <div class="user-info-title">
+        <p>Contact</p>
+      </div>
+      <div class="user-info-details">
+        <p>Name:</p>
+        <p>{{order.user.firstname}} {{order.user.lastname}}</p><br />
+        <p>Email:</p>
+        <p>{{order.user.email}} (<a ng-href="mailto:{{order.user.email}}" class="underline-link">send email</a>)</p><br />
+        <p ng-if="order.user.phone">Phone:</p>
+        <p ng-if="order.user.phone">{{order.user.phone}}</p><br ng-if="order.user.phone" />
+        <p>Date Registered:</p>
+        <p>{{order.user.dateregistered | date:"short"}}</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="user-info-title">
+        <p>Payment</p>
+      </div>
+      <div class="user-info-details">
+        <p>Amount:</p>
+        <p>{{order.completed.total | currency:$}}</p><br />
+        <p>Date:</p>
+        <p>{{order.completed.date | date:"short"}}</p><br />
+        <p>Transaction ID:</p>
+        <p>{{order.completed.stripe_transaction_id}}</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="user-info-title">
+        <p>Shipping</p>
+      </div>
+      <div class="user-info-details">
+        <p>Address:</p>
+        <p ng-if="order.ship_address.ship_name">{{order.ship_address.ship_name}}</p>
+        <p>{{order.ship_address.ship_address1}}</p>
+        <p>{{order.ship_address.ship_address2}}</p>
+        <p>{{order.ship_address.ship_city + ", " + order.ship_address.ship_state + " " + order.ship_address.ship_zip}}</p>
+        <p>{{order.ship_address.ship_country}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div order-details-book class="row book-info-details" ng-repeat="book in order.books track by $index" book-number="{{$index}}"></div>
+
+</div>

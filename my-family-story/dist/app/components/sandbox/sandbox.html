@@ -1,0 +1,14 @@
+<div ng-repeat="item in items track by $index">
+  <s3-uploader repeat-id="$index" max-width="1200" max-height="1200" default-text="Upload Photo" success-text="Upload Complete" s3-url="s3url"></s3-uploader>
+  <div>
+    {{s3url}}
+  </div>
+</div>
+<div>
+  <div>
+    <prints-dropdown prints-selection="printsSelection"></prints-dropdown>
+  </div>
+  <div>
+    {{printsSelection.price}}
+  </div>
+</div>

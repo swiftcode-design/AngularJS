@@ -1,0 +1,188 @@
+<div id="credit-card-modal" class="cart-modal">
+
+  <div class="cart-modal-col">
+    <form>
+        <h2>Card Info</h2>
+        <div class='form-group'>
+          <label>Amount to charge {{cartTotal | currency }}</label>
+        </div>
+        <div class='form-group'>
+            <label>Name on card</label>
+            <input
+            type="text"
+            name="name"
+            ng-model="payment.card.name"
+            required>
+        </div>
+        <div class='form-group'>
+            <label>Card number</label>
+            <input
+            ng-model="payment.card.number"
+            type="text"
+            required>
+        </div>
+
+        <div class="cart-modal-group">
+          <div class="form-group">
+              <label>CVC</label>
+              <input
+              ng-model="payment.card.cvc"
+              type="text"
+              required>
+          </div>
+          <div class="form-group">
+              <label>Zip code</label>
+              <input
+              ng-model="card_zip"
+              type="text"
+              required>
+          </div>
+        </div>
+
+        <div>
+        <label class="cart-modal-inline">
+          Expiration date
+        </label>
+          <div class="cart-modal-inline">
+              <select
+              ng-model="payment.card.exp_month"
+              required >
+                <option value="">Month</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+          </div>
+          <div class="cart-modal-inline">
+            <select name="year" id="year" ng-model="payment.card.exp_year" ng-change="validateExpiry(model.month, model.year)" >
+              <option value="">Year</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+            </select>
+          </div>
+        </div>
+
+    </form>
+  </div>
+
+
+  <div class="cart-modal-col">
+    <form name="shipInfoForm">
+      <h2>Shipping</h2>
+        <div class='form-group'>
+            <label for="name">Name</label>
+            <input class="" type="text" name="name" ng-model="ship_info.ship_name">
+        </div>
+        <div class='form-group'>
+            <label for="address1">Address</label>
+            <input class="" type="text" name="address1" ng-model="ship_info.ship_address1">
+        </div>
+        <div class='form-group'>
+            <label for="address2">Address 2</label>
+            <input class="" type="text" name="address2" ng-model="ship_info.ship_address2">
+        </div>
+        <div class='form-group'>
+            <label for="city">City</label>
+            <input class="" type="text" name="city"  ng-model="ship_info.ship_city">
+        </div>
+
+        <div class="cart-modal-group">
+
+          <div class="form-group state-address">
+              <label for="state">State</label>
+              <select ng-model="ship_info.ship_state" id="state" name="zip">
+                <option value="AL">AL</option>
+                <option value="AK">AK</option>
+                <option value="AZ">AZ</option>
+                <option value="AR">AR</option>
+                <option value="CA">CA</option>
+                <option value="CO">CO</option>
+                <option value="CT">CT</option>
+                <option value="DE">DE</option>
+                <option value="DC">DC</option>
+                <option value="FL">FL</option>
+                <option value="GA">GA</option>
+                <option value="HI">HI</option>
+                <option value="ID">ID</option>
+                <option value="IL">IL</option>
+                <option value="IN">IN</option>
+                <option value="IA">IA</option>
+                <option value="KS">KS</option>
+                <option value="KY">KY</option>
+                <option value="LA">LA</option>
+                <option value="ME">ME</option>
+                <option value="MD">MD</option>
+                <option value="MA">MA</option>
+                <option value="MI">MI</option>
+                <option value="MN">MN</option>
+                <option value="MS">MS</option>
+                <option value="MO">MO</option>
+                <option value="MT">MT</option>
+                <option value="NE">NE</option>
+                <option value="NV">NV</option>
+                <option value="NH">NH</option>
+                <option value="NJ">NJ</option>
+                <option value="NM">NM</option>
+                <option value="NY">NY</option>
+                <option value="NC">NC</option>
+                <option value="ND">ND</option>
+                <option value="OH">OH</option>
+                <option value="OK">OK</option>
+                <option value="OR">OR</option>
+                <option value="PA">PA</option>
+                <option value="RI">RI</option>
+                <option value="SC">SC</option>
+                <option value="SD">SD</option>
+                <option value="TN">TN</option>
+                <option value="TX">TX</option>
+                <option value="UT">UT</option>
+                <option value="VT">VT</option>
+                <option value="VA">VA</option>
+                <option value="WA">WA</option>
+                <option value="WV">WV</option>
+                <option value="WI">WI</option>
+                <option value="WY">WY</option>
+              </select>
+          </div>
+
+          <div>
+            <label for="zip">Zip code</label>
+            <div class="form-group cart-modal-inline">
+              <input type="text" id="zip" name="zip" ng-model="ship_info.ship_zip">
+            </div>
+          </div>
+
+        </div>
+    </form>
+    <div class="modal-form-button-container">
+      <button class="btn btn-red cart-modal-inline" type="button" ng-click="cancel()">Cancel</button>
+      <button class="btn btn-blue cart-modal-inline" type="button" ng-click="charge(payment); putShipAddress()">Confirm</button>
+    </div>
+    <br />
+  </div>
+  <br />
+
+
+
+</div>

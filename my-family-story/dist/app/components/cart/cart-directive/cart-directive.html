@@ -1,0 +1,73 @@
+<div class="table-head">
+  <div class="table-row">
+    <div class="table-cell item-column">
+      Item
+    </div>
+    <div class="table-cell quantity-column">
+      Quantity
+    </div>
+    <div class="table-cell price-column">
+      Price
+    </div>
+  </div>
+</div>
+<div class="table-body table-body-main">
+  <div class="table-body repeat {{'cart-item-' + book._id}}" ng-repeat="book in ctrl.order.cart track by book._id">
+    <div class="table-row book-title">
+      <div>
+        {{book.title}}
+      </div>
+      <div class="remove-item">
+        <a class="underline-link hazard-link" ng-click="ctrl.removeItem(book._id)">
+          Remove <i class="fa fa-times" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="table-body book-details">
+
+      <div class="table-row page-type" ng-repeat="page in book.pageProducts">
+        <div class="table-cell item-column">
+          {{page.page_type + ' Page'}}
+        </div>
+        <div class="table-cell">
+          {{page.quantity}}
+        </div>
+        <div class="table-cell price-column">
+          {{page.subtotal | currency: "$ ":0}}
+        </div>
+      </div>
+      <div ng-class="{'no-border': $index + 1 === ctrl.order.cart.length}" class="table-row prints"  ng-if="book.print_qty" >
+        <div class="table-cell item-column">
+          <div class="prints-title">{{'Printed Copies'}}</div>
+        </div>
+        <div class="table-cell">
+          {{book.print_qty.name}}
+        </div>
+        <div class="table-cell price-column">
+          {{book.print_qty.price | currency: "$ ":0}}
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="table-row cart-total">
+    <div class="table-cell item-column">
+    </div>
+    <div class="table-cell">
+      Total
+    </div>
+    <div class="table-cell price-column">
+      {{ctrl.cartTotal | currency: "$ ":0}}
+    </div>
+  </div>
+  <div class="table-row checkout">
+    <a class="btn btn-blue" ui-sref="book-builder">
+      Return to Books
+    </a>
+    <a class="btn btn-green" ng-click="ctrl.openPaymentModal()">
+      Checkout
+    </a>
+  </div>
+</div>

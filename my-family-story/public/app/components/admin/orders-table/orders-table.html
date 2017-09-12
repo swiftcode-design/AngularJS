@@ -1,0 +1,20 @@
+<tr ng-repeat="order in ctrl.allOrders | orderBy:'user.' + ctrl.orderPredicate | filter:ctrl.filterPredicate track by $index" class="order-row">
+  <td class="product-title" ui-sref="admin.order-details({id:order._id})">
+    {{order.user.firstname}} {{order.user.lastname}}
+  </td>
+  <td class="product-desc" ui-sref="admin.order-details({id:order._id})">
+    {{order.user.email}}
+  </td>
+  <td ui-sref="admin.order-details({id:order._id})">
+    {{ctrl.countTotalPages(order)}}
+  </td>
+  <td ui-sref="admin.order-details({id:order._id})">
+    {{order.completed.date | date:'short'}}
+  </td>
+  <td class="product-price" ui-sref="admin.order-details({id:order._id})">
+    {{order.completed.stripe_transaction_id}}
+  </td>
+  <td>
+    <a class="btn btn-yellow" ng-click="ctrl.toggleArchived(order, ctrl.toggleSwitch)">{{ctrl.toggleSwitch}}</a>
+  </td>
+</tr>

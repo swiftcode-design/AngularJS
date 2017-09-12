@@ -1,0 +1,67 @@
+<div class="modal-header">
+  <h2 class="modal-title text-center"><span ng-if="userBooks.length < 1">Create Your First Project</span><span ng-if="userBooks.length > 0">Select a Project</span></h2>
+  <!-- <span "></span><span i"></span> -->
+</div>
+<div class="modal-body">
+
+  <div class='imgSlider' bb-img-slider-dir>
+    <i id="imgSliderTest2" class="fa fa-chevron-right fa-4x" aria-hidden="true"></i>
+    <div class="book-project-holder" ng-class="{bookArrLength: checkBookLength}" ng-if="userBooks.length > 0">
+      <div class="imgSliderAbs">
+        <div ng-repeat="book in userBooks track by $index" class="projectModelSelectionDiv">
+          <div ng-click="openDeleteBookModal($index)">
+            <!-- <img class="delete-book-box" src="./assets/images/remove.png"/> -->
+            <i class="fa fa-times delete-book-box" aria-hidden="true"></i>
+          </div>
+          <div class="project" ng-click="openBook(book)">
+              <h5 class="centered">{{book.title}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <i id="imgSliderTest1" class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
+  </div>
+<!-- ======mobile====== -->
+  <div class='imgSlider2' bb-img-slider-dir>
+    <i id="imgSliderTest22" class="fa fa-chevron-right fa-4x" aria-hidden="true"></i>
+    <div class="book-project-holder2" ng-class="{bookArrLength: checkBookLength}" ng-if="userBooks.length > 0">
+
+      <div class="imgSliderAbs2">
+        <div ng-repeat="book in userBooks track by $index" class="projectModelSelectionDiv">
+          <div ng-click="openDeleteBookModal($index)">
+            <i class="fa fa-times delete-book-box" aria-hidden="true"></i>
+          </div>
+          <div class="project" ng-click="openBook(book)">
+              <h5 class="centered">{{book.title}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <i id="imgSliderTest12" class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
+  </div>
+ <!-- ======mobile====== -->
+  <div class="row new-project-box">
+    <div class="text-center">
+      <h5> Or Start a New Project</h5>
+    </div>
+  </div>
+  
+  <div class="row">
+    <form>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 text-center">
+          <input type="text" class="form-control" placeholder="New Project Title" ng-model="newBookTitle"/>
+          <button class="btn btn-blue btn-add-project" ng-click="createNewBook()">ADD NEW PROJECT</button>
+        </div>
+      </div>
+      <div class="row text-center pad-top-sm">
+        <!--<div class="col-md-6">
+          <s3-uploader max-width="1200" max-height="1200" default-text="Upload Photo" success-text="Photo Uploaded!" s3-Url></s3-uploader>
+        </div>-->
+      </div>
+    </form>
+  </div>
+</div> <!--end modal body-->
+<div class="modal-footer">
+  <button class="btn btn-yellow" type="button" ng-click="close()">CLOSE</button>
+</div>

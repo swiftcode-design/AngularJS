@@ -1,0 +1,64 @@
+<div class=" container">
+  <div>
+    <div class="accountHeader">
+      <h1>User Account</h1>
+    </div>
+    <div class="row userInfoDiv">
+      <form>
+        <div class="col-md-6 test">
+          <h6>Firstname</h6>
+          <i class="fa fa-pencil" aria-hidden="true"></i> <input  type="text" ng-model="update.firstname" placeholder="{{user.firstname}}" />
+        </div>
+        <div class="col-md-6 test">
+          <h6>Lastname</h6>
+          <i class="fa fa-pencil" aria-hidden="true"></i> <input  type="text" ng-model="update.lastname" placeholder="{{user.lastname}}" />
+        </div>
+
+        <div class="col-md-6 test">
+          <h6>Phone</h6>
+          <i class="fa fa-pencil" aria-hidden="true"></i> <input  type="text" ng-model="update.phone" placeholder="{{user.phone}}" />
+
+        </div>
+        <div class="col-md-6 test">
+          <h6>Email</h6>
+          <input class="account-dir" id="accountInfoEmail"type="text" placeholder="{{user.email}}" disabled />
+        </div>
+
+      <div class="row userInfoDiv">
+        <div class="col-md-6">
+          <h6>Address 1</h6>
+          <i class="fa fa-pencil" aria-hidden="true"></i> <input  id="accountInput" type="text" ng-model="address.address1" placeholder="{{userAddress.address1}}" />
+        </div>
+        <div class="col-md-6">
+          <h6>Address 2</h6>
+           <i class="fa fa-pencil" aria-hidden="true"></i><input id="accountInput" type="text" ng-model="address.address2" placeholder="{{userAddress.address2}}" />
+        </div>
+
+        <div class="col-md-6">
+          <h6>City</h6>
+          <i class="fa fa-pencil" aria-hidden="true"></i> <input id="accountInput" type="text" ng-model="address.city" placeholder="{{userAddress.city}}" />
+        </div>
+        <div class="col-md-6">
+          <h6>State</h6>
+          <i class="fa fa-pencil" aria-hidden="true"></i> <input id="accountInput" type="text" ng-model="address.state" placeholder="{{userAddress.state}}" />
+        </div>
+
+        <div class="col-md-6">
+          <h6>Zip</h6>
+          <i class="fa fa-pencil" aria-hidden="true"></i> <input id="accountInput" type="text" ng-model="address.zip" placeholder="{{userAddress.zip}}" />
+        </div>
+        <div class="col-md-6">
+          <h6>Country</h6>
+          <i class="fa fa-pencil" aria-hidden="true"></i> <input id="accountInput" type="text" ng-model="address.country" placeholder="{{userAddress.country}}" />
+        </div>
+      </div>
+      <button class="btn btn-green  accountInfoBtn" account-dir ng-click="updateUser(update); CreateAddress(address)">Save</button> <h4 id="accountSavedAlert">Saved!!</h4>
+      <!-- <button class="btn btn-green accountInfoBtn2" ng-click="CreateAddress(address)">Save Address</button> <h4 id="accountSavedAlert2">Saved!!</h4> -->
+    </form>
+    </div>
+
+  </div>
+
+
+  </div>
+</div>

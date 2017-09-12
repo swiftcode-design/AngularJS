@@ -1,0 +1,16 @@
+<div class="table-row book-title">
+  {{book.title}}
+</div>
+<div class="table-body book-details">
+  <div class="table-row page-type" ng-repeat="page in book.pageProducts">
+    <div class="table-cell">
+      {{page.page_type + ' Page'}}
+    </div>
+    <div class="table-cell">
+      {{page.quantity}}
+    </div>
+    <div class="table-cell">
+      {{page.subtotal | currency}}
+    </div>
+  </div>
+</div>

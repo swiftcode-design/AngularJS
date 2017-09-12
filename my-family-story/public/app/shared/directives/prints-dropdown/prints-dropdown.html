@@ -1,0 +1,11 @@
+<div class="btn-group" uib-dropdown is-open="status.isopen">
+
+  <button id="single-button" type="button" class="btn btn-primary dropwdown-themed" uib-dropdown-toggle ng-disabled="disabled">
+        {{ctrl.printsSelection ? ctrl.printsSelection.name + ' books for $' + ctrl.printsSelection.price : "Select Print Bundle"}} <span class="caret"></span>
+  </button>
+
+  <ul class="dropdown-menu prints-dropdown" uib-dropdown-menu role="menu" aria-labelledby="single-button" ng-init="">
+    <li role="menuitem" ng-repeat="item in ctrl.prints" ng-click="ctrl.setSelection(item)"><span class="print-bundle-name">{{item.name}}</span><span class="print-bundle-price"> for {{item.price | currency}} </span><span class="print-bundle-description"> ({{item.description}})</span></li>
+  </ul>
+
+</div>

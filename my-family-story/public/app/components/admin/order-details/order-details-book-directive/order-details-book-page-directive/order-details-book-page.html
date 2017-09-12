@@ -1,0 +1,38 @@
+<div class="col-md-12">
+  <div class="row order-details-book-page-number">
+    <div class="col-md-12">
+      <span>Page {{page.page_number}}</span>
+    </div>
+  </div>
+  <div class="row book-page-details">
+    <div class="col-md-1">
+      <p>Type:</p>
+      <p>{{page.page_type}}</p>
+    </div>
+    <div class="col-md-7">
+      <p>Text:</p>
+      <p>{{page.text ? page.text : "No text entered"}}</p>
+      <p>Editing allowed?</p>
+      <p>{{page.edit_allowed ? "Yes" : "No"}}</p>
+    </div>
+    <div class="col-md-4">
+      <p>{{page.page_type === 'Portrait' ? 'Uploaded Photo:' : 'Selected Options:'}}</p>
+      <div ng-if="page.page_type === 'Activity'">
+        <p>{{page.activity_type}}</p>
+        <div ng-if="page.custom_activity">
+          <p>Custom:</p>
+          <p>{{page.custom_activity ? page.custom_activity : "N/A"}}</p>
+        </div>
+      </div>
+      <div ng-if="page.page_type === 'Basic'">
+        <p>N/A</p>
+      </div>
+      <div ng-if="page.page_type === 'Portrait'">
+        <span>
+        <a ng-href="{{page.image_url}}"><img ng-src="{{page.image_url}}" /></a>
+      </div>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>

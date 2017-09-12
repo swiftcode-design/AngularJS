@@ -1,0 +1,40 @@
+<div id="startMainContainer" class="container-fluid container">
+
+  <div class="row">
+    <div class="text-center section-title">
+      <h1>PAGE TYPE</h1>
+    </div>
+  </div>
+
+  <div id="start-container" class="container">
+    <div class="startInfoContainer">
+      <div ng-repeat="page in pageTypes" class="startDiv1">
+          <div class="startDiv1Inner">
+            <img  ng-src="{{page.image1}}" />
+
+              <h3>{{page.name + ' page'}}</h3>
+              <p>
+                {{page.description}}
+              </p>
+              <h3>{{page.price | currency}}</h3>
+
+          </div>
+      </div>
+  </div>
+</div>
+
+  <div id="start-container-mobile" class="row" ng-repeat="page in pageTypes | orderBy:'price' track by $index">
+    <div id="startdiv1" class="col-md-6">
+      <img ng-src="{{page.image1}}" />
+    </div>
+    <div id="startdiv2" class="col-md-6">
+      <h3>{{page.name + ' page'}}</h3>
+      <p>{{page.description}}</p>
+      <h3>{{page.price | currency}}</h3>
+    </div>
+  </div>
+
+  <div class="startBtnDiv">
+    <a class="btn btn-lg btn-blue" ng-click="user ? goToState('book-builder') : login('book-builder')">Start your project</a>
+  </div>
+</div>
